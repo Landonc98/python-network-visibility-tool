@@ -13,7 +13,7 @@ def run_nmap_scan(target_subnet="192.168.0.0/24"):
         "nmap",
         "-sV",
         "-oX", "scan_results.xml",
-        "192.168.0.0/24"
+        target_subnet
     ]
 
     print("Running Nmap scan...")
@@ -51,9 +51,12 @@ def process_packet(packet):
 
 # Main block - this will run when we execute the script directly
 if __name__=='__main__':
-    print("Starting packet sniffer... Press Ctrl+C to stop.")
+    choice = input("Run Nmap scan first? (y/n): ")
+    if choice.lower() == 'y':
+        run_nmap_scan("192.168.0.0/24")
 
     # Start sniffing
     # - prn=process_packet -> call my function for each packet
     # - store=False -> do not store packets in memory (we only want live output)
+    print("Starting packet sniffer... Press Ctrl+C to stop.")
     sniff(prn=process_packet, store=False)
