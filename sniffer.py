@@ -5,7 +5,20 @@
 # Import necessary modules
 from scapy.all import sniff  # sniff() is the function that captures packets
 from datetime import datetime # Used to add readable timestamps to my output
+import subprocess
 
+# Define Nmap scan function
+def run_nmap_scan(target_subnet="192.168.0.0/24"):
+    nmap_command = [
+        "nmap",
+        "-sV",
+        "-oX", "scan_results.xml",
+        "192.168.0.0/24"
+    ]
+
+    print("Running Nmap scan...")
+    subprocess.run(nmap_command, check=True)
+    print("Scan complete.")
 # Define a function that will be called for each captured packet
 def process_packet(packet):
     """
