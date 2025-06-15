@@ -93,6 +93,39 @@ def save_results_to_json(results, filename_prefix="scan_results"):
 
     print(f"Results saved to {json_filename}")
 
+def diff_engine(file1, file2):
+    with open(file1) as f1, open(file2) as f2:
+        scan1 = json.load(f1)
+        scan2 = json.load(f2)
+
+    hosts1 = {host["ip"]: host for host in scan1}
+    hosts2 = {host["ip"]: host for host in scan2}
+
+    print("\n--- DIFFERENTIAL SCAN ANALYSIS ---")
+
+    # New Hosts
+    new_hosts = set(hosts2) - set(hosts1)
+    if new_hosts:
+        print("\nNew Hosts:")
+        for ip in new_hosts:
+            print(f" + {ip}")
+    else:
+        print("\nNo hosts removed.")
+
+    # Modified hosts (same IP, different services)
+    print("\nModified Hosts:")
+    found_modification = False
+    for ip in set(hosts1) & set(hosts2):
+        ports1 = {(p["port"], p["service"], p.get("version", "")) for p in hosts1[ip]["ports"]}
+        ports2 = {(p["port"], p["service"], p.get("version", "")) for p in hosts2[ip]["ports"]}
+        if ports1 != ports2:
+            found_modification = True
+            print(f" * {ip}")
+            print(f"  Before: {sorted(list(ports1))}")
+            print(f"  After: {sorted(list(ports2))}")
+    if not found_modification:
+        print(" No changes in services on existing hosts.")
+
 
 # Main block - this will run when we execute the script directly
 if __name__=='__main__':
@@ -100,10 +133,15 @@ if __name__=='__main__':
     if choice.lower() == 'y':
         run_nmap_scan("192.168.0.0/24")
 
-# Parse the results
+    # Parse the results
     results = parse_nmap_results("scan_results.xml")
     print(json.dumps(results, indent=4))
     save_results_to_json(results)
+
+    # OPTIONAL: Run the diff engine for testing 
+    file1 = "scan_results_20250612_155732.json"
+    file2 = "scan_results_20250615_180540.json"
+    diff_engine(file1, file2)
 
     # Start sniffing
     # - prn=process_packet -> call my function for each packet
