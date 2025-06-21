@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Sat Jun 21 17:32:15 2025 as: /usr/lib/nmap/nmap -p 22,80,443 -sS -sV -oX ./logs/scan_results_20250621_173215.xml 192.168.0.0/24 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -p 22,80,443 -sS -sV -oX ./logs/scan_results_20250621_173215.xml 192.168.0.0/24" start="1750541535" startstr="Sat Jun 21 17:32:15 2025" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="3" services="22,80,443"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.1" addrtype="ipv4"/>
+<address addr="F0:A7:31:05:08:90" addrtype="mac" vendor="TP-Link Limited"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.30" addrtype="ipv4"/>
+<address addr="04:7C:16:48:4F:45" addrtype="mac" vendor="Micro-Star Intl"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.24" addrtype="ipv4"/>
+<address addr="34:5E:08:3A:94:AE" addrtype="mac" vendor="Roku"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.34" addrtype="ipv4"/>
+<address addr="22:07:80:4C:E0:F3" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Service scan" time="1750541560" extrainfo="2 services on 4 hosts"/>
+<taskbegin task="NSE" time="1750541560"/>
+<taskend task="NSE" time="1750541560"/>
+<taskbegin task="NSE" time="1750541560"/>
+<taskend task="NSE" time="1750541560"/>
+<host starttime="1750541551" endtime="1750541560"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.1" addrtype="ipv4"/>
+<address addr="F0:A7:31:05:08:90" addrtype="mac" vendor="TP-Link Limited"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="closed" reason="reset" reason_ttl="64"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="BusyBox http" version="1.19.4" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:busybox:busybox:1.19.4</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="BusyBox http" version="1.19.4" ostype="Linux" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:busybox:busybox:1.19.4</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+</ports>
+<times srtt="508" rttvar="2192" to="100000"/>
+</host>
+<host starttime="1750541551" endtime="1750541551"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.24" addrtype="ipv4"/>
+<address addr="34:5E:08:3A:94:AE" addrtype="mac" vendor="Roku"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="closed" reason="reset" reason_ttl="64"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="closed" reason="reset" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="64"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="88318" rttvar="38015" to="240378"/>
+</host>
+<host starttime="1750541551" endtime="1750541552"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.30" addrtype="ipv4"/>
+<address addr="04:7C:16:48:4F:45" addrtype="mac" vendor="Micro-Star Intl"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="280" rttvar="5000" to="100000"/>
+</host>
+<host starttime="1750541551" endtime="1750541552"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.34" addrtype="ipv4"/>
+<address addr="22:07:80:4C:E0:F3" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="62573" rttvar="39999" to="222569"/>
+</host>
+<taskbegin task="SYN Stealth Scan" time="1750541560"/>
+<taskend task="SYN Stealth Scan" time="1750541560" extrainfo="3 total ports"/>
+<taskbegin task="Service scan" time="1750541560"/>
+<taskbegin task="NSE" time="1750541560"/>
+<taskend task="NSE" time="1750541560"/>
+<taskbegin task="NSE" time="1750541560"/>
+<taskend task="NSE" time="1750541560"/>
+<host starttime="1750541560" endtime="1750541560"><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="192.168.0.27" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="closed" reason="reset" reason_ttl="64"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="closed" reason="reset" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="64"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="21" rttvar="2822" to="100000"/>
+</host>
+<runstats><finished time="1750541560" timestr="Sat Jun 21 17:32:40 2025" summary="Nmap done at Sat Jun 21 17:32:40 2025; 256 IP addresses (5 hosts up) scanned in 24.95 seconds" elapsed="24.95" exit="success"/><hosts up="5" down="251" total="256"/>
+</runstats>
+</nmaprun>

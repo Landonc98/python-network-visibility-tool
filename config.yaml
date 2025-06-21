@@ -1,0 +1,19 @@
+# config.yaml
+
+targets:
+  - 192.168.0.0/24
+
+ports: "22,80,443"
+
+output_dir: "./logs"
+
+alert_rules:
+  - port: 23
+    severity: high
+  - port: 3389
+    severity: medium
+
+
+scan_options:
+  aggressive: false
+  service_version: true

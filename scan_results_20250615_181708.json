@@ -1,0 +1,60 @@
+[
+    {
+        "ip": "192.168.0.1",
+        "ports": [
+            {
+                "port": "53",
+                "service": "domain",
+                "version": "unknown"
+            },
+            {
+                "port": "80",
+                "service": "http",
+                "version": "1.19.4"
+            },
+            {
+                "port": "443",
+                "service": "http",
+                "version": "1.19.4"
+            },
+            {
+                "port": "1900",
+                "service": "upnp",
+                "version": "1.8"
+            }
+        ]
+    },
+    {
+        "ip": "192.168.0.24",
+        "ports": [
+            {
+                "port": "7000",
+                "service": "rtsp",
+                "version": "377.40.00"
+            }
+        ]
+    },
+    {
+        "ip": "192.168.0.30",
+        "ports": []
+    },
+    {
+        "ip": "192.168.0.88",
+        "ports": [
+            {
+                "port": "49152",
+                "service": "tcpwrapped",
+                "version": "unknown"
+            },
+            {
+                "port": "62078",
+                "service": "tcpwrapped",
+                "version": "unknown"
+            }
+        ]
+    },
+    {
+        "ip": "192.168.0.27",
+        "ports": []
+    }
+]
