@@ -29,7 +29,7 @@ def parse_nmap_xml(file_path):
                     ip = addr.get('@addr')
                     break
         elif isinstance(address_info, dict):
-            ip = address_info.get('@addr')S
+            ip = address_info.get('@addr')
         ports = host.get('ports', {}).get('port', [])
         if not isinstance(ports, list):
             ports = [ports]

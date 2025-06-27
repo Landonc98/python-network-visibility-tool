@@ -17,3 +17,10 @@ alert_rules:
 scan_options:
   aggressive: false
   service_version: true
+
+alerts:
+  risky_ports: [21, 23, 3389]
+  risky_services:
+    - ftp
+    - telnet
+    - rdp

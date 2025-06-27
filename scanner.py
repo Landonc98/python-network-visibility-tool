@@ -1,12 +1,9 @@
-import subprocess
 import datetime
 import os
 from config_loader import load_config
 
 
-def run_nmap_scan():
-    # Load settings from config.yaml
-    config = load_config()
+def run_nmap_scan(config, output_path):
 
     targets = config['targets']
     ports = config['ports']
@@ -22,22 +19,19 @@ def run_nmap_scan():
 
     # Prepare targets and output path
     target_string = " ".join(targets)
-    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_file = os.path.join(output_dir, f"scan_results_{timestamp}.xml")
+    port_string = ports
 
     # Make sure output directory exists 
     os.makedirs(output_dir, exist_ok=True)
 
     # Final command
-    cmd = ["nmap", "-p", ports] + flags + ["-oX", output_file, target_string]
+    command = [
+        "nmap",
+        *flags,
+        "-p", port_string,
+        target_string,
+        "-oX", output_path # Output as XML
+    ]
 
-    print(f"Running command: {' '.join(cmd)}")
-
-    try:
-        subprocess.run(cmd, check=True)
-        print("Scan complete. Results saved to: {output_file}")
-        return output_file
-    except subprocess.CalledProcessError as e:
-        print(f"Error: Nmap scan failed.\n{e}")
-        return None
-
+    print(f"[*] Running: {' '.join(command)}")
+    os.system(" ".join(command))
