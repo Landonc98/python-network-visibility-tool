@@ -3,7 +3,7 @@
 targets:
   - 192.168.0.0/24
 
-ports: "22,80,443"
+ports: "1-65535"
 
 output_dir: "./logs"
 
@@ -16,8 +16,8 @@ alert_rules:
 
 scan_options:
   aggressive: false
-  service_version: true
-
+  service_version: false
+  skip_host_directory: true
 alerts:
   risky_ports: [21, 23, 3389]
   risky_services:

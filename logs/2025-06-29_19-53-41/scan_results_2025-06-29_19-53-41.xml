@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Sun Jun 29 19:53:41 2025 as: /usr/lib/nmap/nmap -sS -sV -p 1-1024 -oX ./logs/2025-06-29_19-53-41/scan_results_2025-06-29_19-53-41.xml 192.168.0.0/24 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -sS -sV -p 1-1024 -oX ./logs/2025-06-29_19-53-41/scan_results_2025-06-29_19-53-41.xml 192.168.0.0/24" start="1751241221" startstr="Sun Jun 29 19:53:41 2025" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1024" services="1-1024"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.1" addrtype="ipv4"/>
+<address addr="F0:A7:31:05:08:90" addrtype="mac" vendor="TP-Link Limited"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.88" addrtype="ipv4"/>
+<address addr="4A:43:50:42:33:86" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.30" addrtype="ipv4"/>
+<address addr="04:7C:16:48:4F:45" addrtype="mac" vendor="Micro-Star Intl"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.34" addrtype="ipv4"/>
+<address addr="22:07:80:4C:E0:F3" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.24" addrtype="ipv4"/>
+<address addr="34:5E:08:3A:94:AE" addrtype="mac" vendor="Roku"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1751241224" endtime="1751241242"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.1" addrtype="ipv4"/>
+<address addr="F0:A7:31:05:08:90" addrtype="mac" vendor="TP-Link Limited"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1021">
+<extrareasons reason="reset" count="1021" proto="tcp" ports="1-52,54-79,81-442,444-1024"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="56"/><service name="domain" extrainfo="generic dns response: SERVFAIL" servicefp="SF-Port53-TCP:V=7.95%I=7%D=6/29%Time=6861D217%P=x86_64-pc-linux-gnu%r(DNSVersionBindReqTCP,20,&quot;\0\x1e\0\x06\x81\x82\0\x01\0\0\0\0\0\0\x07version\x04bind\0\0\x10\0\x03&quot;);" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="BusyBox http" version="1.19.4" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:busybox:busybox:1.19.4</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="BusyBox http" version="1.19.4" ostype="Linux" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:busybox:busybox:1.19.4</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+</ports>
+<times srtt="1210" rttvar="241" to="100000"/>
+</host>
+<host starttime="1751241224" endtime="1751241224"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.24" addrtype="ipv4"/>
+<address addr="34:5E:08:3A:94:AE" addrtype="mac" vendor="Roku"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1024">
+<extrareasons reason="reset" count="1024" proto="tcp" ports="1-1024"/>
+</extraports>
+</ports>
+<times srtt="3586" rttvar="897" to="100000"/>
+</host>
+<host starttime="1751241224" endtime="1751241232"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.30" addrtype="ipv4"/>
+<address addr="04:7C:16:48:4F:45" addrtype="mac" vendor="Micro-Star Intl"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="1024">
+<extrareasons reason="no-response" count="1024" proto="tcp" ports="1-1024"/>
+</extraports>
+</ports>
+<times srtt="133" rttvar="5000" to="100000"/>
+</host>
+<host starttime="1751241224" endtime="1751241232"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.34" addrtype="ipv4"/>
+<address addr="22:07:80:4C:E0:F3" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1024">
+<extrareasons reason="reset" count="1024" proto="tcp" ports="1-1024"/>
+</extraports>
+</ports>
+<times srtt="6541" rttvar="2201" to="100000"/>
+</host>
