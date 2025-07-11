@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Fri Jul 11 16:12:51 2025 as: /usr/lib/nmap/nmap -sS -sV -p 1-65535 -oX ./logs/scan_results_2025-07-11_16-12-51.xml 192.168.0.0/24 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -sS -sV -p 1-65535 -oX ./logs/scan_results_2025-07-11_16-12-51.xml 192.168.0.0/24" start="1752264771" startstr="Fri Jul 11 16:12:51 2025" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.1" addrtype="ipv4"/>
+<address addr="F0:A7:31:05:08:90" addrtype="mac" vendor="TP-Link Limited"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.24" addrtype="ipv4"/>
+<address addr="34:5E:08:3A:94:AE" addrtype="mac" vendor="Roku"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.30" addrtype="ipv4"/>
+<address addr="04:7C:16:48:4F:45" addrtype="mac" vendor="Micro-Star Intl"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="SYN Stealth Scan" time="1752264922" extrainfo="196605 total ports"/>
+<taskbegin task="Service scan" time="1752264922"/>
+<taskend task="Service scan" time="1752264963" extrainfo="11 services on 3 hosts"/>
+<taskbegin task="NSE" time="1752264963"/>
+<taskend task="NSE" time="1752264964"/>
+<taskbegin task="NSE" time="1752264964"/>
+<taskend task="NSE" time="1752264964"/>
+<host starttime="1752264774" endtime="1752264964"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.1" addrtype="ipv4"/>
+<address addr="F0:A7:31:05:08:90" addrtype="mac" vendor="TP-Link Limited"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65530">
+<extrareasons reason="reset" count="65530" proto="tcp" ports="1-52,54-79,81-442,444-1899,1901-20000,20002-65535"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="56"/><service name="domain" extrainfo="generic dns response: SERVFAIL" servicefp="SF-Port53-TCP:V=7.95%I=7%D=7/11%Time=687170E0%P=x86_64-pc-linux-gnu%r(DNSVersionBindReqTCP,20,&quot;\0\x1e\0\x06\x81\x82\0\x01\0\0\0\0\0\0\x07version\x04bind\0\0\x10\0\x03&quot;);" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="BusyBox http" version="1.19.4" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:busybox:busybox:1.19.4</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="BusyBox http" version="1.19.4" ostype="Linux" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:busybox:busybox:1.19.4</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="1900"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="upnp" product="MiniUPnP" version="1.8" extrainfo="TP-LINK router; UPnP 1.1" devicetype="broadband router" method="probed" conf="10"><cpe>cpe:/a:miniupnp_project:miniupnpd:1.8</cpe></service></port>
+<port protocol="tcp" portid="20001"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="Dropbear sshd" version="2019.78" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:matt_johnston:dropbear_ssh_server:2019.78</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+</ports>
+<times srtt="622" rttvar="91" to="100000"/>
+</host>
+<host starttime="1752264774" endtime="1752264964"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.24" addrtype="ipv4"/>
+<address addr="34:5E:08:3A:94:AE" addrtype="mac" vendor="Roku"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65532">
+<extrareasons reason="reset" count="65532" proto="tcp" ports="1-6999,7001-8059,8061-32796,32798-65535"/>
+</extraports>
+<port protocol="tcp" portid="7000"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="rtsp" product="AirTunes rtspd" version="377.40.00" method="probed" conf="10"><cpe>cpe:/a:apple:airtunes:377.40.00</cpe></service></port>
+<port protocol="tcp" portid="8060"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="upnp" servicefp="SF-Port8060-TCP:V=7.95%I=7%D=7/11%Time=687170E2%P=x86_64-pc-linux-gnu%r(GetRequest,5AB,&quot;HTTP/1\.1\x20200\x20OK\r\nServer:\x20Roku/14\.6\.4\x20UPnP/1\.0\x20Roku/14\.6\.4\r\nContent-Length:\x201302\r\nCache-Control:\x20no-cache\r\nContent-Type:\x20text/xml;\x20charset=\&quot;utf-8\&quot;\r\n\r\n&lt;\?xml\x20version=\&quot;1\.0\&quot;\?&gt;\r\n&lt;root\x20xmlns=\&quot;urn:schemas-upnp-org:device-1-0\&quot;&gt;\r\n&lt;specVersion&gt;\r\n&lt;major&gt;1&lt;/major&gt;\r\n&lt;minor&gt;0&lt;/minor&gt;\r\n&lt;/specVersion&gt;\r\n&lt;device&gt;\r\n&lt;deviceType&gt;urn:roku-com:device:player:1-0&lt;/deviceType&gt;\r\n&lt;friendlyName&gt;Living\x20Room&lt;/friendlyName&gt;\r\n&lt;manufacturer&gt;Roku&lt;/manufacturer&gt;\r\n&lt;manufacturerURL&gt;http://www\.roku\.com/&lt;/manufacturerURL&gt;\r\n&lt;modelDescription&gt;Roku\x20Streaming\x20Player\x20Network\x20Media&lt;/modelDescription&gt;\r\n&lt;modelName&gt;3820R2&lt;/modelName&gt;\r\n&lt;modelNumber&gt;3820R2&lt;/modelNumber&gt;\r\n&lt;modelURL&gt;http://www\.roku\.com/&lt;/modelURL&gt;\r\n&lt;serialNumber&gt;X0250051AC3P&lt;/serialNumber&gt;\r\n&lt;UDN&gt;uuid:28002140-0000-1000-8033-345e083a94ae&lt;/UDN&gt;\r\n&lt;iconList&gt;\r\n&lt;icon&gt;\r\n&lt;mimetype&gt;image/png&lt;/mimetype&gt;\r\n&lt;width&gt;360&lt;/width&gt;\r\n&lt;height&gt;219&lt;/height&gt;\r\n&lt;depth&gt;8&lt;/depth&gt;\r\n&lt;url&gt;device-image\.pn&quot;)%r(HTTPOptions,50,&quot;HTTP/1\.1\x20200\x20OK\r\nServer:\x20Roku/14\.6\.4\x20UPnP/1\.0\x20Roku/14\.6\.4\r\nContent-Length:\x200\r\n\r\n&quot;)%r(FourOhFourRequest,57,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:\x20Roku/14\.6\.4\x20UPnP/1\.0\x20Roku/14\.6\.4\r\nContent-Length:\x200\r\n\r\n&quot;);" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="32797"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="unknown" servicefp="SF-Port32797-TCP:V=7.95%I=7%D=7/11%Time=687170E5%P=x86_64-pc-linux-gnu%r(GetRequest,47,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Length:\x200\r\nContent-Type:\x20text/plain\r\n\r\n&quot;)%r(HTTPOptions,47,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Length:\x200\r\nContent-Type:\x20text/plain\r\n\r\n&quot;)%r(FourOhFourRequest,47,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Length:\x200\r\nContent-Type:\x20text/plain\r\n\r\n&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="2393" rttvar="560" to="100000"/>
+</host>
+<host starttime="1752264774" endtime="1752264964"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.30" addrtype="ipv4"/>
+<address addr="04:7C:16:48:4F:45" addrtype="mac" vendor="Micro-Star Intl"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65532">
+<extrareasons reason="no-response" count="65532" proto="tcp" ports="1-7679,7681-27035,27037-57620,57622-65535"/>
+</extraports>
+<port protocol="tcp" portid="7680"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="pando-pub" method="table" conf="3"/></port>
+<port protocol="tcp" portid="27036"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="steam" product="Valve Steam In-Home Streaming service" extrainfo="TLSv1.2 PSK" tunnel="ssl" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="57621"><state state="open" reason="syn-ack" reason_ttl="128"/></port>
+</ports>
+<times srtt="650" rttvar="331" to="100000"/>
+</host>
+<taskbegin task="SYN Stealth Scan" time="1752264964"/>
+<taskend task="SYN Stealth Scan" time="1752264964" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1752264964"/>
+<taskbegin task="NSE" time="1752264964"/>
+<taskend task="NSE" time="1752264964"/>
+<taskbegin task="NSE" time="1752264964"/>
+<taskend task="NSE" time="1752264964"/>
+<host starttime="1752264964" endtime="1752264964"><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="192.168.0.27" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65535">
+<extrareasons reason="reset" count="65535" proto="tcp" ports="1-65535"/>
+</extraports>
+</ports>
+<times srtt="1" rttvar="0" to="100000"/>
+</host>
+<runstats><finished time="1752264964" timestr="Fri Jul 11 16:16:04 2025" summary="Nmap done at Fri Jul 11 16:16:04 2025; 256 IP addresses (4 hosts up) scanned in 193.32 seconds" elapsed="193.32" exit="success"/><hosts up="4" down="252" total="256"/>
+</runstats>
+</nmaprun>

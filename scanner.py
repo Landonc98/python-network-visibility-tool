@@ -18,6 +18,7 @@ def run_nmap_scan(config, output_path):
         flags.append("-A")
     if scan_options.get("skip_host_discovery"):
         flags.append("-Pn") # Treat all hosts as up, skip ping check
+    
 
     # Prepare targets and output path
     target_string = " ".join(targets)

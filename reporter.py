@@ -2,7 +2,7 @@ import os
 from datetime import datetime
 
 def generate_markdown_report(scan_data, output_dir="./reports"):
-    os.makedirs(output_dir, exist_ok=True)
+    os.makedirs(os.path.dirname(output_dir), exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     report_path = os.path.join(output_dir, f"report_{timestamp}.md")
 

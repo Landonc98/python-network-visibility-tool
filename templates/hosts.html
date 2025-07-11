@@ -12,7 +12,7 @@
     <td>{{ host.ip }}</td>
     <td>
       <ul>
-      {% for port in host.ports %}
+      {% for port in host.open_ports %}
         <li>{{ port.port }} ({{ port.service }} - {{ port.version }})</li>
       {% endfor %}
       </ul>

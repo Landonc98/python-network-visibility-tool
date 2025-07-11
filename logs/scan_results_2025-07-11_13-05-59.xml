@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Fri Jul 11 13:05:59 2025 as: /usr/lib/nmap/nmap -sS -sV -p 1-65535 -oX ./logs/scan_results_2025-07-11_13-05-59.xml 192.168.0.0/24 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -sS -sV -p 1-65535 -oX ./logs/scan_results_2025-07-11_13-05-59.xml 192.168.0.0/24" start="1752253559" startstr="Fri Jul 11 13:05:59 2025" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.1" addrtype="ipv4"/>
+<address addr="F0:A7:31:05:08:90" addrtype="mac" vendor="TP-Link Limited"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.24" addrtype="ipv4"/>
+<address addr="34:5E:08:3A:94:AE" addrtype="mac" vendor="Roku"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.30" addrtype="ipv4"/>
+<address addr="04:7C:16:48:4F:45" addrtype="mac" vendor="Micro-Star Intl"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.88" addrtype="ipv4"/>
+<address addr="4A:43:50:42:33:86" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskprogress task="SYN Stealth Scan" time="1752253597" percent="35.66" remaining="56" etc="1752253653"/>
+<taskprogress task="SYN Stealth Scan" time="1752253654" percent="62.56" remaining="53" etc="1752253707"/>
+<taskprogress task="SYN Stealth Scan" time="1752253684" percent="63.27" remaining="69" etc="1752253753"/>
+<taskprogress task="SYN Stealth Scan" time="1752253714" percent="63.56" remaining="85" etc="1752253799"/>
+<taskprogress task="SYN Stealth Scan" time="1752253744" percent="63.92" remaining="101" etc="1752253844"/>
+<taskprogress task="SYN Stealth Scan" time="1752253774" percent="64.29" remaining="116" etc="1752253890"/>
+<taskprogress task="SYN Stealth Scan" time="1752253810" percent="64.69" remaining="134" etc="1752253943"/>
+<taskprogress task="SYN Stealth Scan" time="1752253855" percent="65.40" remaining="153" etc="1752254008"/>
+<taskprogress task="SYN Stealth Scan" time="1752253921" percent="66.92" remaining="176" etc="1752254096"/>
+<taskprogress task="SYN Stealth Scan" time="1752254011" percent="68.78" remaining="202" etc="1752254213"/>
+<taskprogress task="SYN Stealth Scan" time="1752254149" percent="71.31" remaining="235" etc="1752254384"/>
+<taskprogress task="SYN Stealth Scan" time="1752254386" percent="75.24" remaining="270" etc="1752254656"/>
+<taskprogress task="SYN Stealth Scan" time="1752254556" percent="75.29" remaining="325" etc="1752254881"/>

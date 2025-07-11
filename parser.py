@@ -46,14 +46,9 @@ def parse_nmap_xml(file_path):
     return result
 
 def compare_scans(old_file, new_file):
-    import json
-
-    def load_json(path):
-        with open(path, 'r') as f:
-            return json.load(f)
     
-    old_data = load_json(old_file)
-    new_data = load_json(new_file)
+    old_data = parse_nmap_xml(old_file)
+    new_data = parse_nmap_xml(new_file)
 
     old_hosts = {host["ip"]: host for host in old_data}
     new_hosts = {host["ip"]: host for host in new_data}

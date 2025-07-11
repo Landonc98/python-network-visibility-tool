@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Fri Jul 11 10:51:39 2025 as: /usr/lib/nmap/nmap -&#45;privileged -sS -p 1-65535 -oX ./logs/scan_results_2025-07-11_10-51-39.xml 192.168.0.0/24 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -&#45;privileged -sS -p 1-65535 -oX ./logs/scan_results_2025-07-11_10-51-39.xml 192.168.0.0/24" start="1752245499" startstr="Fri Jul 11 10:51:39 2025" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.1" addrtype="ipv4"/>
+<address addr="F0:A7:31:05:08:90" addrtype="mac" vendor="TP-Link Limited"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.24" addrtype="ipv4"/>
+<address addr="34:5E:08:3A:94:AE" addrtype="mac" vendor="Roku"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.30" addrtype="ipv4"/>
+<address addr="04:7C:16:48:4F:45" addrtype="mac" vendor="Micro-Star Intl"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1752245501" endtime="1752245540"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.1" addrtype="ipv4"/>
+<address addr="F0:A7:31:05:08:90" addrtype="mac" vendor="TP-Link Limited"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65530">
+<extrareasons reason="reset" count="65530" proto="tcp" ports="1-52,54-79,81-442,444-1899,1901-20000,20002-65535"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="56"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="1900"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="upnp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="20001"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="microsan" method="table" conf="3"/></port>
+</ports>
+<times srtt="316" rttvar="51" to="100000"/>
+</host>
+<host starttime="1752245501" endtime="1752245541"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.24" addrtype="ipv4"/>
+<address addr="34:5E:08:3A:94:AE" addrtype="mac" vendor="Roku"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65532">
+<extrareasons reason="reset" count="65532" proto="tcp" ports="1-6999,7001-8059,8061-32796,32798-65535"/>
+</extraports>
+<port protocol="tcp" portid="7000"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="afs3-fileserver" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8060"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="aero" method="table" conf="3"/></port>
+<port protocol="tcp" portid="32797"><state state="open" reason="syn-ack" reason_ttl="64"/></port>
+</ports>
+<times srtt="3854" rttvar="2584" to="100000"/>
+</host>
+<host starttime="1752245501" endtime="1752245628"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.30" addrtype="ipv4"/>
+<address addr="04:7C:16:48:4F:45" addrtype="mac" vendor="Micro-Star Intl"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65532">
+<extrareasons reason="no-response" count="65532" proto="tcp" ports="1-7679,7681-27035,27037-57620,57622-65535"/>
+</extraports>
+<port protocol="tcp" portid="7680"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="pando-pub" method="table" conf="3"/></port>
+<port protocol="tcp" portid="27036"><state state="open" reason="syn-ack" reason_ttl="128"/></port>
+<port protocol="tcp" portid="57621"><state state="open" reason="syn-ack" reason_ttl="128"/></port>
+</ports>
+<times srtt="676" rttvar="418" to="100000"/>
+</host>
+<host starttime="1752245628" endtime="1752245628"><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="192.168.0.27" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65535">
+<extrareasons reason="reset" count="65535" proto="tcp" ports="1-65535"/>
+</extraports>
+</ports>
+<times srtt="1" rttvar="0" to="100000"/>
+</host>
+<runstats><finished time="1752245628" timestr="Fri Jul 11 10:53:48 2025" summary="Nmap done at Fri Jul 11 10:53:48 2025; 256 IP addresses (4 hosts up) scanned in 129.33 seconds" elapsed="129.33" exit="success"/><hosts up="4" down="252" total="256"/>
+</runstats>
+</nmaprun>

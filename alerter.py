@@ -1,6 +1,6 @@
 # alerter.py
 
-def check_alerts(scan_results, alert_config):
+def check_alerts(scan_results, alert_config, diff_data=None):
     """
     Scan through parsed scan data and return alerts based on risky ports or services.
      
@@ -23,5 +23,10 @@ def check_alerts(scan_results, alert_config):
                 alerts.append(f"[ALERT] Host {ip} has risky port open: {port}")
             if service in risky_services:
                 alerts.append(f"[ALERT] Host {ip} is running risky service: {service}")
+    
+    # Alert on new hosts if diff data is passed
+    if diff_data:
+        for ip in diff_data.get("new_hosts", []):
+            alerts.append(f"[ALERT] New host detected on network: {ip}")
     
     return alerts

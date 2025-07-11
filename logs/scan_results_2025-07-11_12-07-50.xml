@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Fri Jul 11 12:07:50 2025 as: /usr/lib/nmap/nmap -sS -&#45;max-retries 2 -&#45;host-timeout 30s -p 1-65535 -oX ./logs/scan_results_2025-07-11_12-07-50.xml 192.168.0.0/24 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -sS -&#45;max-retries 2 -&#45;host-timeout 30s -p 1-65535 -oX ./logs/scan_results_2025-07-11_12-07-50.xml 192.168.0.0/24" start="1752250070" startstr="Fri Jul 11 12:07:50 2025" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.1" addrtype="ipv4"/>
+<address addr="F0:A7:31:05:08:90" addrtype="mac" vendor="TP-Link Limited"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.30" addrtype="ipv4"/>
+<address addr="04:7C:16:48:4F:45" addrtype="mac" vendor="Micro-Star Intl"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.24" addrtype="ipv4"/>
+<address addr="34:5E:08:3A:94:AE" addrtype="mac" vendor="Roku"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.34" addrtype="ipv4"/>
+<address addr="22:07:80:4C:E0:F3" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1752250072" endtime="1752250102" timedout="true"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.1" addrtype="ipv4"/>
+<address addr="F0:A7:31:05:08:90" addrtype="mac" vendor="TP-Link Limited"/>
+<hostnames>
+</hostnames>
+<times srtt="409" rttvar="160" to="100000"/>
+</host>
+<host starttime="1752250072" endtime="1752250102" timedout="true"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.24" addrtype="ipv4"/>
+<address addr="34:5E:08:3A:94:AE" addrtype="mac" vendor="Roku"/>
+<hostnames>
+</hostnames>
+<times srtt="1545" rttvar="204" to="100000"/>
+</host>
+<host starttime="1752250072" endtime="1752250102" timedout="true"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.30" addrtype="ipv4"/>
+<address addr="04:7C:16:48:4F:45" addrtype="mac" vendor="Micro-Star Intl"/>
+<hostnames>
+</hostnames>
+<times srtt="279" rttvar="161" to="100000"/>
+</host>
+<host starttime="1752250072" endtime="1752250102" timedout="true"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.0.34" addrtype="ipv4"/>
+<address addr="22:07:80:4C:E0:F3" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<times srtt="2292" rttvar="492" to="100000"/>
+</host>
+<host starttime="1752250102" endtime="1752250103"><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="192.168.0.27" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65535">
+<extrareasons reason="reset" count="65535" proto="tcp" ports="1-65535"/>
+</extraports>
+</ports>
+<times srtt="57" rttvar="109" to="100000"/>
+</host>
+<runstats><finished time="1752250103" timestr="Fri Jul 11 12:08:23 2025" summary="Nmap done at Fri Jul 11 12:08:23 2025; 256 IP addresses (5 hosts up) scanned in 32.66 seconds" elapsed="32.66" exit="success"/><hosts up="5" down="251" total="256"/>
+</runstats>
+</nmaprun>

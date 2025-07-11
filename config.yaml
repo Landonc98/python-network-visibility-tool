@@ -16,8 +16,8 @@ alert_rules:
 
 scan_options:
   aggressive: false
-  service_version: false
-  skip_host_directory: true
+  service_version: true
+  skip_host_directory: false
 alerts:
   risky_ports: [21, 23, 25, 110, 135, 139, 445, 1433, 3306, 3389, 5900, 8080]
   risky_services:

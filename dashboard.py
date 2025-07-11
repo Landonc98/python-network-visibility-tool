@@ -1,35 +1,45 @@
 
 from flask import Flask, render_template, jsonify
+from parser import parse_nmap_xml
 import json
 import os
 import glob
+import re
+from datetime import datetime
 
 app = Flask(__name__)
+
 
 def load_scan_data():
     try:
         # Look for all scan result JSON files
-        scan_files = glob.glob("scan_results_*.json")
+        scan_files = glob.glob("logs/scan_results_*.xml")
+        print("Found scan files:", scan_files)
         if not scan_files:
             raise FileNotFoundError("No scan result files found.")
         
-        # Get the most recent one
-        latest_file = max(scan_files, key=os.path.getctime)
+        # Pick the latest XML file
+        latest_file = max(scan_files, key=os.path.getmtime)
         print("Loading scan file:", latest_file)
 
-        with open(latest_file, "r") as f:
-            return json.load(f)
+        try:
+            return parse_nmap_xml(latest_file)
+        except Exception as e:
+            print(f"Error loading scan data: {e}")
+            return []
+    
     except Exception as e:
-        print(f"Error loading scan data: {e}")
+        print(f"Error laoding scan data: {e}")
         return []
 
 @app.route('/')
 def home():
-    return render_template('base.html')
+    return render_template('home.html')
 
 @app.route('/hosts')
 def hosts():
     data = load_scan_data()
+    print("DEBUG hosts data:", data)
     return render_template('hosts.html', hosts=data)
 
 @app.route('/vulnerabilities')
@@ -74,18 +84,19 @@ def vulnerabilities():
 
 @app.route('/history')
 def history():
-    scan_files = sorted(glob.glob("scan_results_*.json"), key=os.path.getctime, reverse=True)
+    scan_files = sorted(glob.glob("logs/scan_results_*.xml"), key=os.path.getctime, reverse=True)
     history_data = []
 
     for file in scan_files:
         try:
-            with open(file, "r") as f:
-                data = json.load(f)
-                host_count = len(data)
-                history_data.append({
-                    "filename": file,
-                    "host_count": host_count,
-                })
+            # Parse XML file to get hosts count
+            data = parse_nmap_xml(file)
+            host_count = len(data)
+
+            history_data.append({
+                "filename": file,
+                "host_count": host_count
+            })
         except Exception as e:
             print(f"Failed to load {file}: {e}")
     
