@@ -19,8 +19,17 @@ scan_options:
   service_version: false
   skip_host_directory: true
 alerts:
-  risky_ports: [21, 23, 3389]
+  risky_ports: [21, 23, 25, 110, 135, 139, 445, 1433, 3306, 3389, 5900, 8080]
   risky_services:
     - ftp
     - telnet
-    - rdp
+    - smtp
+    - POP3
+    - MSRPC
+    - NetBIOS
+    - SMB
+    - MSSQL
+    - MySQL
+    - RDP
+    - VNC
+    - HTTP Alt

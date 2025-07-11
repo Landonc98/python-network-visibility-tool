@@ -1,10 +1,11 @@
 import os
 import yaml
 import datetime
+import argparse
 
 from config_loader import load_config
 from scanner import run_nmap_scan
-from parser import parse_nmap_xml
+from parser import parse_nmap_xml, compare_scans
 from alerter import check_alerts
 from reporter import generate_markdown_report
 

@@ -1,0 +1,23 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<h2>Detected Hosts</h2>
+<table border="1">
+  <tr>
+    <th>IP Address</th>
+    <th>Open Ports</th>
+  </tr>
+  {% for host in hosts %}
+  <tr>
+    <td>{{ host.ip }}</td>
+    <td>
+      <ul>
+      {% for port in host.ports %}
+        <li>{{ port.port }} ({{ port.service }} - {{ port.version }})</li>
+      {% endfor %}
+      </ul>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Vulnerable Hosts</h2>
+
+{% if vulnerable_hosts %}
+    <table border="1">
+        <tr>
+            <th>IP Address</th>
+            <th>Port</th>
+            <th>Version</th>
+            <th>Reason</th>
+        </tr>
+        {% for host in vulnerable_hosts %}
+            {% for vuln in host.vulns %}
+            <tr>
+                <td>{{ host.ip }}</td>
+                <td>{{ vuln.port }}</td>
+                <td>{{ vuln.service }}</td>
+                <td>{{ vuln.version }}</td>
+                <td>{{ vuln.reason }}</td>
+            </tr>
+            {% endfor %}
+        {% endfor %}
+    </table>
+{% else %}
+    <p>No known vulnerabilities detected.</p>
+{% endif %}
+{% endblock %}
